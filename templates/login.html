@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
+</head>
+<body>
+    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/paris.jpg' %}" data-speed="0.8"></div>
+    <div class="container >
+        <div class="row">
+            <div class="col">
+                    <div class="m-5 p-5">
+                        <h2 class="text-uppercase">Login</h2>
+                        <form class="newsletter_form align-items-center justify-content-between" action="login" method="post">
+                            {% csrf_token %}
+                            <input class="newsletter_input newsletter_input_name mt-2" type="text" name="username" placeholder="User Name"><br>
+                            <input class="newsletter_input newsletter_input_name mt-4" type="password" name="password" placeholder="Password"><br>
+                            <input class="newsletter_button mt-4" type="submit">
+                        </form>
+                    </div>
+                    </div>
+                </div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+</body>
+</html>
